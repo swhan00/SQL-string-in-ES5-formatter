@@ -18,7 +18,8 @@ const styles = {
     borderRadius: "4px",
     boxSizing: "border-box",
     height: "797px",
-    padding: "18.5px 14px"
+    padding: "18.5px 14px",
+    overflow: "auto"
   }
 };
 
@@ -40,7 +41,7 @@ class Index extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      str: "select\n    *\nfrom\n    dataset.table\nwhere\n  x = 1"
+      str: "select\n    *\nfrom\n    dataset.table\nwhere\n    x = 1"
     };
   }
 
@@ -62,7 +63,7 @@ class Index extends Component {
           </Typography>
         </Box>
         <Grid container spacing={2}>
-          <Grid item sm>
+          <Grid item sm={6}>
             <Box m={3}>
               <TextField
                 className={classes.textarea}
@@ -74,7 +75,7 @@ class Index extends Component {
               />
             </Box>
           </Grid>
-          <Grid item sm>
+          <Grid item sm={6}>
             <Box m={3}>
               <div className={classes.resultBox}>{formatSqlString(str)}</div>
             </Box>
