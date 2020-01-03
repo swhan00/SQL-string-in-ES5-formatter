@@ -39,7 +39,9 @@ function formatSqlString(str) {
 class Index extends Component {
   constructor(props) {
     super(props);
-    this.state = { str: "select\n  *\nfrom\n  dataset.table\nwhere\n  x = 1" };
+    this.state = {
+      str: "select\n    *\nfrom\n    dataset.table\nwhere\n  x = 1"
+    };
   }
 
   onStrChange = evt => {

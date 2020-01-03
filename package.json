@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "PORT=8080 next start"
   },
   "author": "",
   "license": "ISC",
